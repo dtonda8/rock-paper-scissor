@@ -1,0 +1,70 @@
+* {
+    color:#e2b714;
+    font-family: 'Roboto Mono', monospace;
+}
+
+body {
+    text-align: center;
+    background-color:rgba(0,0,0,.75);
+}
+
+button {
+    border: 5px solid #e2b714;
+    border-radius: 10px;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 96px;
+    background: transparent;
+    transition: background-color 0.1s;
+}
+
+button:hover {
+    background: rgba(0, 0, 0, 0.448);
+}
+
+button:active {
+    background: white;
+}
+
+#header {
+    padding: 16px;
+    font-size: 48px;
+}
+
+#options-container {
+    padding: 36px;
+}
+
+#scores-container {
+    padding: 24px;
+    font-size: 36px;
+}
+
+#footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #555555;
+    color: white;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+  }
+
+img {
+    width: 20px;
+    height: auto;
+}
+
+a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

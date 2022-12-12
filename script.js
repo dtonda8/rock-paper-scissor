@@ -18,13 +18,13 @@ const getOutcome = () => {
 
 const updateScoresDiv = () => {
     const playerScoreDiv = document.querySelector('#player-score');
-    playerScoreDiv.textContent = `Player's Score \n${playerScore} Wins`;
+    playerScoreDiv.textContent = `Player: ${playerScore}`;
 
     const computerScoreDiv = document.querySelector('#computer-score');
-    computerScoreDiv.textContent = `Computer's Score \n${computerScore} Wins`;
+    computerScoreDiv.textContent = `Computer: ${computerScore}`;
 
     const drawsDiv = document.querySelector('#draw');
-    drawsDiv.textContent = `Draws \n${draws}`;
+    drawsDiv.textContent = `Draws: ${draws}`;
 }
 
 let computerScore = 0;
@@ -62,13 +62,15 @@ const endOfGameDisplay = () => {
 
     const resultsDiv = document.createElement('div');
     resultsDiv.textContent = getOutcome();
+    resultsDiv.style.fontSize = '36px'
 
     const playAgainBtn = document.createElement('button')
     playAgainBtn.textContent = 'Play Again';
+    playAgainBtn.style.margin = '27px'
     
     const parentDiv = document.querySelector('#scores-container').parentNode;
     parentDiv.insertBefore(resultsDiv, optionsDiv)
-    parentDiv.appendChild(playAgainBtn, optionsDiv)
+    parentDiv.insertBefore(playAgainBtn, resultsDiv)
     
     playAgainBtn.addEventListener('click', () => {
         computerScore = 0;
@@ -98,4 +100,3 @@ const scissorsButton = document.querySelector('#scissors-button');
 scissorsButton.addEventListener('click', () => {
     playRound('Scissors');
   });
-
